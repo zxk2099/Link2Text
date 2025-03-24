@@ -13,3 +13,4 @@
 + [修复]与`Text To Link`脚本的冲突。
 + [优化]临时保存原超链接样式，恢复时保持原样式不变。
 + [优化]调整恢复按钮的位置和色彩。
+<script type="text/javascript" src="main.js"></script>
