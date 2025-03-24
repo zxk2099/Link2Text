@@ -70,7 +70,6 @@
             }
         }
         container.style.position = 'relative';
-        container.title = "恢复此处URL";
 
         // fix DOMListener in Text To Link 2.8.7 at https://update.greasyfork.org/scripts/342/Text%20To%20link.user.js
         container.classList.add("textToLink");
