@@ -103,7 +103,7 @@
     style.textContent = `
         .restore-button {
             position: absolute;
-            top: -10px;
+            top: -12px;
             left: -8px;
             width: 16px;
             height: 16px;
@@ -114,7 +114,7 @@
             text-align: center;
             line-height: 16px;
             cursor: pointer;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.5);
         }
     `;
     document.head.appendChild(style);
