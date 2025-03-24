@@ -1,8 +1,9 @@
 // ==UserScript==
-// @name         取消超链接 Link2Text
-// @namespace    link_to_text
-// @version      1.1
-// @description  长按<a>元素超链接取消超链接
+// @name:ZH      取消超链接
+// @name:EN      Link2Text
+// @namespace    https://github.com/zxk2099/Link2Text
+// @version      1.2
+// @description  长按<a>元素超链接取消超链接，并提供一个额外的新的按钮以恢复原超链接。
 // @author       zxk2099
 // @icon         https://github.com/zxk2099/Link2Text/blob/main/icon.png
 // @downloadURL  https://github.com/zxk2099/Link2Text/blob/main/main.js
@@ -13,10 +14,11 @@
 
 (function () {
 
-    // 在此更改长按时间（毫秒）
+    // 长按时间（毫秒）
     const longPressTime = 1000;
 
-    let pressTimer = null,targetLink = null;
+    let pressTimer = null;
+    let targetLink = null;
     const savedLinks = new Map();
     let linkCounter = 0;
 
@@ -60,15 +62,25 @@
         const linkHTML = linkElement.innerHTML;
 
         const container = document.createElement('span');
-        container.style.position = 'relative';
         container.innerHTML = linkHTML;
+        for (const [name, value] of Object.entries(attributes)) {
+            if (name !== 'href' && name !== 'target') {
+                container.setAttribute(name, value);
+            }
+        }
+        container.style.position = 'relative';
+        container.title = "恢复此处URL";
+
+        // fix DOMListener in Text To Link 2.8.7 at https://update.greasyfork.org/scripts/342/Text%20To%20link.user.js
+        container.classList.add("textToLink");
+
         const restoreButton = document.createElement('div');
         restoreButton.className = 'restore-button';
         restoreButton.textContent = '↺';
         restoreButton.dataset.id = linkId;
         restoreButton.addEventListener('click', (event) => {
-            event.stopPropagation();
-            restoreLink(container, linkId);
+            event.stopPropagation(); 
+            restoreLink(container, linkId); 
         });
         container.appendChild(restoreButton);
         linkElement.replaceWith(container);
@@ -90,18 +102,18 @@
     style.textContent = `
         .restore-button {
             position: absolute;
-            top: -8px;
-            right: -8px;
+            top: -10px;
+            left: -8px;
             width: 16px;
             height: 16px;
-            background-color: #ff0000;
+            background-color: #e31111;
             color: white;
             border-radius: 50%;
             font-size: 12px;
             text-align: center;
             line-height: 16px;
             cursor: pointer;
-            box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
         }
     `;
     document.head.appendChild(style);
