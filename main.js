@@ -6,7 +6,7 @@
 // @description     长按<a>元素超链接取消超链接，并提供一个额外的新的按钮以恢复原超链接。
 // @description:EN  A long press on the <a> element hyperlink cancels the hyperlink, with an additional new button to scroll back.
 // @author          zxk2099
-// @icon            https://github.com/zxk2099/Link2Text/blob/main/icon.png
+// @icon            https://raw.githubusercontent.com/zxk2099/Link2Text/refs/heads/main/icon.png
 // @downloadURL     https://github.com/zxk2099/Link2Text/blob/main/main.js
 // @updateURL       https://github.com/zxk2099/Link2Text/blob/main/main.js
 // @supportURL      https://github.com/zxk2099/Link2Text/issues
