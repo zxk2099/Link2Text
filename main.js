@@ -9,7 +9,7 @@
 // @icon            https://raw.githubusercontent.com/zxk2099/Link2Text/refs/heads/main/icon.png
 // @downloadURL     https://github.com/zxk2099/Link2Text/blob/main/main.js
 // @updateURL       https://github.com/zxk2099/Link2Text/blob/main/main.js
-// @supportURL      https://github.com/zxk2099/Link2Text/issues
+// @supportURL      https://github.com/zxk2099/Link2Text
 // @match           *://*/*
 // ==/UserScript==
 
