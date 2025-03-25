@@ -3,7 +3,7 @@
 
 ## 📌 下载安装
 1. 安装Tampermonkey扩展
-2. 点击安装脚本：<a href="https://greasyfork.org/zh-CN/scripts/530665">取消超链接 - GreasyFork</a>
+2. 点击安装脚本：<a href="https://greasyfork.org/zh-CN/scripts/530665" target="_blank">取消超链接 - GreasyFork</a>
 ## 🚀 安装后尝试一下：<a href="https://github.com/zxk2099/Link2Text">长按我1秒钟</a>
 ## 🐞 问题
 + 恢复按钮显示不全或不显示
