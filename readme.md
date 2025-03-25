@@ -5,9 +5,10 @@
 <img alt="Favicon" src="https://www.faviconextractor.com/favicon/greasyfork.org?larger=true" /><a href="https://greasyfork.org/zh-CN/scripts/530665">取消超链接 - Greasy Fork</a>
 
 ## 问题
-+ 恢复按钮显示不全或不显示：
++ 恢复按钮显示不全或不显示
   + 部分父级元素`overflow:hidden`样式限制内部元素显示
   + 网站动态变更元素尺寸或位置
++ Bing搜索结果无效：并非响应点击事件
 ## 更新记录
 ### `2025/03/24` v1.2
 + [修复]与`Text To Link`脚本的冲突。
